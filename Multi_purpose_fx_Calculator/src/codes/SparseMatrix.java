@@ -2,50 +2,6 @@ package codes;
 
 public class SparseMatrix {
 
-	public static void main(String[] args) {
-		int[][] Given = { { 0, 1, 5 }, { 1, 0, 2 }, { 1, 2, 8 }, { 1, 3, 3 }, { 2, 0, 3 } };
-
-		int[][] res = CompactToSparse(Given, 4, 4);
-
-		for (int i = 0; i < 4; i++) {
-			for (int j = 0; j < 4; j++) {
-				System.out.print(res[i][j] + " |");
-			}
-			System.out.println();
-		}
-
-		System.out.println("\n" + getSparseSize(res) + "\n");
-
-		int[][] res_ = SparseToCompact(res);
-
-		for (int i = 0; i < res_.length; i++) {
-			for (int j = 0; j < res_[0].length; j++) {
-				System.out.print(res_[i][j] + " |");
-			}
-			System.out.println();
-		}
-	}
-
-//	private int Rows;
-//	private int Columns;
-//
-////	final int MAX = 100;
-//	int[][] Data;
-//
-//	public SparseMatrix(int rows, int cols) {
-//
-//		Rows = rows;
-//		Columns = cols;
-//		Data = new int[rows][cols];
-//
-//	}
-
-//	public void AddData(int i, int j, int value) {
-//		if (i < Data.length && j < Data[0].length)
-//			this.Data[i][j] = value;
-//
-//	}
-
 	public static int[][] CompactToSparse(int[][] compactSparseMatrix, int originalROWS, int originalCOLUMNS) {
 
 		int[][] Converted = new int[originalROWS][originalCOLUMNS];
