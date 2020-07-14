@@ -2,16 +2,6 @@ package codes;
 
 public class BigInt {
 
-	public static void main(String[] args) {
-		BigInt a = new BigInt("4");
-		BigInt b = new BigInt("48");
-		System.out.println("a negativity is " + a.isNegative());
-		System.out.println("b negativity is " + b.isNegative());
-		BigInt res = new BigInt();
-		res.Multiply(a, b);
-		System.out.println(res);
-	}
-
 	private boolean negative;
 
 	// properties
@@ -91,7 +81,7 @@ public class BigInt {
 	public void Sum(BigInt Given, BigInt Given_2) {
 		int[] First = new int[100000000];
 		int[] Second = new int[100000000];
-		int[] Res = new int[10000000];
+		int[] Res = new int[100000000];
 		int cFirst = Given.StrToRevArr(First);
 		int cSec = Given_2.StrToRevArr(Second);
 		int max = cFirst;
@@ -132,9 +122,9 @@ public class BigInt {
 
 	public void Minus(BigInt Given, BigInt Given_2) {
 		String FinalRes = "";
-		int[] First = new int[1000000];
-		int[] Second = new int[1000000];
-		int[] Res = new int[1000000];
+		int[] First = new int[100000000];
+		int[] Second = new int[100000000];
+		int[] Res = new int[100000000];
 
 		int cC = 0;
 		int cA = Given.StrToRevArr(First);
@@ -238,9 +228,9 @@ public class BigInt {
 
 	public void Multiply(BigInt Given, BigInt Given_2) {
 		String Result = "";
-		int[] First = new int[1000000];
-		int[] Second = new int[1000000];
-		int[] Res = new int[1000000];
+		int[] First = new int[100000000];
+		int[] Second = new int[100000000];
+		int[] Res = new int[100000000];
 
 		int cRes = 0;
 		int cA = Given.StrToRevArr(First);
@@ -293,7 +283,7 @@ public class BigInt {
 
 	public void Factorial(long Given) {
 		String result = "";
-		int[] arr = new int[100000];
+		int[] arr = new int[100000000];
 		int cArr = 1;
 		arr[0] = 1;
 		for (int i = 1; i <= Given; i += 1) {
